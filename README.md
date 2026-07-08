@@ -25,6 +25,11 @@ Prerequisites
 To run the SOAP feature engineering notebook and machine learning models, you need the following Python libraries installed:
 pip install dscribe scikit-learn xgboost numpy pandas matplotlib jupyter
 
+Feature Generation Flow
+MD Geometry Parsing: Extracts snapshots from molecular dynamics configurations.
+SOAP Generation (05-soap-feature.ipynb): Configures atomic environment parameters (cutoff distance, regularizing Gaussian width, and expansion orders) using the dscribe library to compute the structural power spectrum.
+Model Training: Maps the generated high-dimensional SOAP vectors to target electronic coupling values using regression frameworks.
+
 Contact & Citation
 Roshan Khatri
 Ph.D. Candidate, Computational Chemistry
