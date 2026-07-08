@@ -20,3 +20,13 @@ Predicting electronic coupling across broad geometric spaces requires different 
 ├── 05-soap-feature.ipynb       # Jupyter Notebook detailing SOAP generation and mapping
 ├── models/                     # [Optional folder for your KRR, RF, and XGBoost training scripts]
 └── README.md                   # Project documentation
+Getting Started
+Prerequisites
+To run the SOAP feature engineering notebook and machine learning models, you need the following Python libraries installed:
+pip install dscribe scikit-learn xgboost numpy pandas matplotlib jupyter
+
+Contact & Citation
+Roshan Khatri
+Ph.D. Candidate, Computational Chemistry
+Kent State University
+Advisor: Prof. Barry D. Dunietz
