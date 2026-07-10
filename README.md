@@ -14,7 +14,6 @@ Predicting electronic coupling across broad geometric spaces requires different 
 ---
 
 ## Repository Layout
-
 .
 ├── README.md                     # This file
 ├── requirements.txt              # Pip dependencies (packages to install)
