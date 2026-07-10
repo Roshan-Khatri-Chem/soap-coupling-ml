@@ -14,8 +14,6 @@ Predicting electronic coupling across broad geometric spaces requires different 
 ---
 
 ## Repository Layout
-
-```text
 .
 ├── README.md                     # This file
 ├── requirements.txt              # Pip dependencies (packages to install)
@@ -81,6 +79,7 @@ Feature Generation Flow
 
 
 Contact & Citations
+rkhatri2@kent.edu
 Roshan Khatri Ph.D. Candidate, Computational Chemistry
 Kent State University
 Advisor: Prof. Barry D. Dunietz
