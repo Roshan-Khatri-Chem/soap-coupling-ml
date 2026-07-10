@@ -1,3 +1,4 @@
+```markdown
 # Multi-Scale Electronic Coupling Prediction using SOAP and Physics-Informed Machine Learning
 
 This repository contains machine learning workflows developed to predict electronic coupling matrix elements in molecular assemblies (e.g., metal-porphyrin dimers) from both ideal rigid structures and structurally distorted configurations sampled from molecular dynamics (MD) trajectories.
@@ -14,6 +15,8 @@ Predicting electronic coupling across broad geometric spaces requires different 
 ---
 
 ## Repository Layout
+
+```text
 .
 ├── README.md                     # This file
 ├── requirements.txt              # Pip dependencies (packages to install)
@@ -39,11 +42,15 @@ Predicting electronic coupling across broad geometric spaces requires different 
     ├── *.pkl                     # Serialized KRR trained model weight artifacts
     ├── *.png                     # Model predictive parity and analysis visualization plots
     └── *.csv                     # Tabulated model error residuals and prediction arrays
+```
+*(★ = The master dataset file required to train or evaluate any local model variant.)*
 
-(★ = The master dataset file required to train or evaluate any local model variant.)
+---
 
-Performance Summary
-1. SOAP Feature KRR Model
+## Performance Summary
+
+### 1. SOAP Feature KRR Model
+```text
 ==================================================
    KRR DIMER MODEL TRAINING REPORT: SOAP FEATURES
 ==================================================
@@ -55,8 +62,10 @@ Train                    | 0.9604     | 0.1472     | 0.0948
 Validation (CV Mean)     | 0.6884     | 0.4137     | 0.2686
 Test (Hold-Out)          | 0.6101     | 0.4667     | 0.2915
 ==================================================
+```
 
-2. Physical 6-Descriptor KRR Model
+### 2. Physical 6-Descriptor KRR Model
+```text
 ==================================================
   KRR DIMER MODEL TRAINING REPORT (6 DESCRIPTORS)
 ==================================================
@@ -66,20 +75,33 @@ Train                    | 0.8469     | 0.1869
 Validation (CV Mean)     | 0.7662     | 0.2240
 Test (Hold-Out)          | 0.7546     | 0.2380
 ==================================================
-Note: The 6-descriptor model shows excellent generalization with minimal performance drop-off between validation and hold-out testing phases.
+```
+*Note: The 6-descriptor model shows excellent generalization with minimal performance drop-off between validation and hold-out testing phases.*
 
-Prerequisites
+---
+
+## Prerequisites
+
 To run the SOAP feature engineering notebooks and machine learning workflows, install the required libraries:
+
+```bash
 pip install dscribe scikit-learn xgboost numpy pandas matplotlib jupyter
+```
 
-Feature Generation Flow
-1.MD Geometry Parsing: Extracts snapshots from molecular dynamics configurations.
-2.SOAP Generation (04_soap_feature.ipynb): Configures atomic environment parameters (cutoff distance, regularizing Gaussian width, and expansion orders) using the dscribe library to compute the structural power spectrum.
-2.Model Training: Maps the generated high-dimensional SOAP vectors to target electronic coupling values using regression frameworks.
+---
 
+## Feature Generation Flow
 
-Contact & Citations
-rkhatri2@kent.edu
-Roshan Khatri Ph.D. Candidate, Computational Chemistry
-Kent State University
-Advisor: Prof. Barry D. Dunietz
+1. **MD Geometry Parsing:** Extracts snapshots from molecular dynamics configurations.
+2. **SOAP Generation (`04_soap_feature.ipynb`):** Configures atomic environment parameters (cutoff distance, regularizing Gaussian width, and expansion orders) using the `dscribe` library to compute the structural power spectrum.
+3. **Model Training:** Maps the generated high-dimensional SOAP vectors to target electronic coupling values using regression frameworks.
+
+---
+
+## Contact & Citations
+
+**Roshan Khatri** Ph.D. Candidate, Computational Chemistry  
+Kent State University  
+Email: rkhatri2@kent.edu  
+Advisor: Prof. Barry D. Dunietz  
+```
